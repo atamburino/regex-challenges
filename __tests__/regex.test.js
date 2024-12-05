@@ -19,7 +19,7 @@ const {
     // splitByDelimiters,
     // checkMultilineStart,
     // validateUSAddress,
-} = require('./regex-challenges');
+} = require('../regex-challenges');
 
 describe('Regex Challenges', () => {
     test('Match a specific word', () => {
