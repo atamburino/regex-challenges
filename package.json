@@ -1,0 +1,15 @@
+{
+  "name": "regex-challenges",
+  "version": "1.0.0",
+  "description": "In this lab, you’ll explore and implement JavaScript functions to solve regex-based challenges. The goal is to gain hands-on experience with regex patterns, string methods, and error handling using toThrow in Jest. You’ll set up your project from scratch, create test cases using Jest, and write regex logic to pass the provided tests.",
+  "main": "regex-challenges.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
