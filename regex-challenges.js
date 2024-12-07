@@ -1,6 +1,18 @@
 // Match a Specific Word
 // Example: "I love JavaScript" -> true; "I love javascript" -> false
-const matchJavaScript = () => {};
+
+//Function for match JS with a parameter called input.
+const matchJavaScript = (input) => {
+  
+  // The forward slashes (/) are delimiters that enclose the pattern.
+  // This pattern is a literal string match, meaning it will look for the exact text "I love JavaScript" in the input. 
+  // The regex is case-sensitive,
+  const regex = /I love JavaScript/;
+
+  // Use the .test() method to check if the input string matches the regex
+  // .test() returns true if the input matches, or false if it does not
+  return regex.test(input);
+};
 
 // Validate Email Address
 // Example: "test@example.com" -> true; "invalid-email" -> false
