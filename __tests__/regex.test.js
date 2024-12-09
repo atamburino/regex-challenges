@@ -2,7 +2,7 @@ const {
     matchJavaScript,
     validateEmail,
     extractNumbers,
-    // replaceWhitespace,
+    replaceWhitespace,
     // validatePhoneNumber,
     // extractHexColors,
     // validateUrl,
@@ -38,10 +38,10 @@ describe('Regex Challenges', () => {
         expect(extractNumbers('No numbers here')).toEqual([]);
     });
 
-    // test('Replace whitespace', () => {
-    //     expect(replaceWhitespace('Hello World')).toBe('Hello_World');
-    //     expect(replaceWhitespace('multiple   spaces')).toBe('multiple_spaces');
-    // });
+    test('Replace whitespace', () => {
+        expect(replaceWhitespace('Hello World')).toBe('Hello_World');
+        expect(replaceWhitespace('multiple   spaces')).toBe('multiple_spaces');
+    });
 
     // test('Validate phone number', () => {
     //     expect(validatePhoneNumber('(123) 456-7890')).toBe(true);
