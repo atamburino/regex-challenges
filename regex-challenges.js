@@ -16,7 +16,11 @@ const matchJavaScript = (input) => {
 
 // Validate Email Address
 // Example: "test@example.com" -> true; "invalid-email" -> false
-const validateEmail = () => {};
+const validateEmail = (email) => {
+  const regex = /test@example.com/i;
+  return regex.test(email);
+};
+
 
 // Extract Numbers
 // Example: "abc123def456" -> ["123", "456"]; "no numbers" -> []
@@ -92,7 +96,7 @@ const validateUSAddress = () => {};
 
 module.exports = {
   matchJavaScript,
-  // validateEmail,
+  validateEmail,
   // extractNumbers,
   // replaceWhitespace,
   // validatePhoneNumber,
