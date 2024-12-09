@@ -24,7 +24,18 @@ const validateEmail = (email) => {
 
 // Extract Numbers
 // Example: "abc123def456" -> ["123", "456"]; "no numbers" -> []
-const extractNumbers = () => {};
+const extractNumbers = (input) => {
+  // \d+ means:
+  //   - \d: matches any digit (0-9)
+  //   - +: matches one or more of the preceding character (digits in this case)
+  // g: global flag, finds all matches in the string, not just the first one
+  const regex = /\d+/g;
+
+  // Self notes:
+  // - If no matches are found, .match() returns null
+  // - The || [] provides a fallback to an empty array if no matches exist
+  return (input.match(regex) || []);
+};
 
 // Replace Whitespace
 // Example: "Hello World" -> "Hello_World"; "a b c" -> "a_b_c"
@@ -97,7 +108,7 @@ const validateUSAddress = () => {};
 module.exports = {
   matchJavaScript,
   validateEmail,
-  // extractNumbers,
+  extractNumbers,
   // replaceWhitespace,
   // validatePhoneNumber,
   // extractHexColors,

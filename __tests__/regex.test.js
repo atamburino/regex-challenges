@@ -1,7 +1,7 @@
 const {
     matchJavaScript,
     validateEmail,
-    // extractNumbers,
+    extractNumbers,
     // replaceWhitespace,
     // validatePhoneNumber,
     // extractHexColors,
@@ -33,10 +33,10 @@ describe('Regex Challenges', () => {
         expect(validateEmail('invalid-email')).toBe(false);
     });
 
-    // test('Extract numbers', () => {
-    //     expect(extractNumbers('abc123def456')).toEqual(['123', '456']);
-    //     expect(extractNumbers('No numbers here')).toEqual([]);
-    // });
+    test('Extract numbers', () => {
+        expect(extractNumbers('abc123def456')).toEqual(['123', '456']);
+        expect(extractNumbers('No numbers here')).toEqual([]);
+    });
 
     // test('Replace whitespace', () => {
     //     expect(replaceWhitespace('Hello World')).toBe('Hello_World');
