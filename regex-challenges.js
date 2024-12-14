@@ -75,7 +75,12 @@ const extractHexColors = (str) => {
 
 // Validate URL
 // Example: "https://example.com" -> true; "ftp://example.com" -> false
-const validateUrl = () => {};
+const validateUrl = (url) => {
+  
+  const urlRegex = /^https?:\/\/[^\s/$.?#].[^\s]*$/i;
+  
+  return urlRegex.test(url);
+};
 
 // Validate Dates
 // Example: "12/25/2023" -> true; "25/12/2023" -> false
@@ -136,7 +141,7 @@ module.exports = {
   replaceWhitespace,
   validatePhoneNumber,
   extractHexColors,
-  // validateUrl,
+  validateUrl,
   // validateDate,
   // countVowels,
   // extractDomain,
