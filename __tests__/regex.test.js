@@ -53,11 +53,11 @@ describe('Regex Challenges', () => {
         expect(extractHexColors('no colors')).toEqual([]);
     });
 
-    // test('Validate URL', () => {
-    //     expect(validateUrl('https://example.com')).toBe(true);
-    //     expect(validateUrl('https://EXAMPLE.COM')).toBe(true); // Case-insensitivity for domain
-    //     expect(validateUrl('ftp://example.com')).toBe(false);
-    // });
+    test('Validate URL', () => {
+        expect(validateUrl('https://example.com')).toBe(true);
+        expect(validateUrl('https://EXAMPLE.COM')).toBe(true); // Case-insensitivity for domain
+        expect(validateUrl('ftp://example.com')).toBe(false);
+    });
 
     // test('Validate dates', () => {
     //     expect(validateDate('12/25/2023')).toBe(true);
