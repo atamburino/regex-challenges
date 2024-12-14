@@ -84,7 +84,12 @@ const validateUrl = (url) => {
 
 // Validate Dates
 // Example: "12/25/2023" -> true; "25/12/2023" -> false
-const validateDate = () => {};
+const validateDate = (date) => {
+
+  // This regex checks to see if the first two numbers are 1-12, the next step checks 1-39  // and the \d{4} checks for last 4 of the year.
+  const dateRegex = /^(0?[1-9]|1[0-2])\/([0-3][0-9])\/\d{4}$/;
+  return dateRegex.test(date);
+};
 
 // Count Vowels
 // Example: "hello" -> 2; "xyz" -> 0
@@ -142,7 +147,7 @@ module.exports = {
   validatePhoneNumber,
   extractHexColors,
   validateUrl,
-  // validateDate,
+  validateDate,
   // countVowels,
   // extractDomain,
   // matchHtmlTags,
