@@ -110,7 +110,23 @@ const countVowels = (string) => {
 
 // Extract Domain Names
 // Example: "test@example.com" -> "example.com"; "invalid" -> null
-const extractDomain = () => {};
+const extractDomain = (email) => {
+  
+  // @ finds the @ symbol
+  // ([^@]+) creates a capture group for one or more characters that are NOT @
+  // $ ensures we're matching at the end of the string
+  const domainRegex = /@([^@]+)$/;
+  
+  // Use .match() to find the regex pattern in the email
+  // If it matches, this will return an array with the full match and captured group
+  // If no match, returns null
+  const match = email.match(domainRegex);
+
+  // If match exists, return the captured group (index 1)
+  // If no match, return null
+  return match ? match[1] : null;
+
+};
 
 // Match HTML Tags
 // Example: "<div><p>Hello</p></div>" -> ["<div>", "<p>", "</p>", "</div>"]; "text" -> []
@@ -162,7 +178,7 @@ module.exports = {
   validateUrl,
   validateDate,
   countVowels,
-  // extractDomain,
+  extractDomain,
   // matchHtmlTags,
   // findCapitalizedWords,
   // matchRepeatedWords,
