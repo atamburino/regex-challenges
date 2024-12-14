@@ -48,7 +48,20 @@ const replaceWhitespace = (input) => {
 
 // Validate Phone Number
 // Example: "(123) 456-7890" -> true; "123-456-7890" -> false
-const validatePhoneNumber = () => {};
+const validatePhoneNumber = (input) => {
+  // THE WHY
+  // ^ : start of the string
+  // \( : literal opening parenthesis
+  // \d{3} : exactly 3 digits
+  // \) : literal closing parenthesis
+  // \s : exactly one space
+  // \d{3} : exactly 3 digits
+  // - : literal hyphen
+  // \d{4} : exactly 4 digits
+  // $ : end of the string
+  const regex = /^\(\d{3}\)\s\d{3}-\d{4}$/;
+  return regex.test(input)
+};
 
 // Extract Hexadecimal Colors
 // Example: "Colors: #FFF, #123ABC" -> ["#FFF", "#123ABC"]; "no colors" -> []
@@ -115,7 +128,7 @@ module.exports = {
   validateEmail,
   extractNumbers,
   replaceWhitespace,
-  // validatePhoneNumber,
+  validatePhoneNumber,
   // extractHexColors,
   // validateUrl,
   // validateDate,
