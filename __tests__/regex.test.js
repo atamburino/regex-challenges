@@ -7,7 +7,7 @@ const {
     extractHexColors,
     validateUrl,
     validateDate,
-    // countVowels,
+    countVowels,
     // extractDomain,
     // matchHtmlTags,
     // findCapitalizedWords,
@@ -65,11 +65,11 @@ describe('Regex Challenges', () => {
         expect(validateDate('25/12/2023')).toBe(false); // Invalid format
     });
 
-    // test('Count vowels', () => {
-    //     expect(countVowels('hello')).toBe(2);
-    //     expect(countVowels('HELLO')).toBe(2); // Case-insensitivity check
-    //     expect(countVowels('xyz')).toBe(0);
-    // });
+    test('Count vowels', () => {
+        expect(countVowels('hello')).toBe(2);
+        expect(countVowels('HELLO')).toBe(2); // Case-insensitivity check
+        expect(countVowels('xyz')).toBe(0);
+    });
 
     // test('Extract domain names', () => {
     //     expect(extractDomain('test@example.com')).toBe('example.com');

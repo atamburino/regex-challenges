@@ -93,7 +93,20 @@ const validateDate = (date) => {
 
 // Count Vowels
 // Example: "hello" -> 2; "xyz" -> 0
-const countVowels = () => {};
+const countVowels = (string) => {
+  
+  // G flag finds all matches globally
+  /// i glag makes it case-insensitive
+  const vowelRegex = /[aeiou]/gi;
+
+  // match returns an array of matches or null
+  const matches = string.match(vowelRegex);
+
+  // if matches exist -> reuturn the length
+  // if no matches return 0
+  return matches ? matches.length : 0;
+
+};
 
 // Extract Domain Names
 // Example: "test@example.com" -> "example.com"; "invalid" -> null
@@ -148,7 +161,7 @@ module.exports = {
   extractHexColors,
   validateUrl,
   validateDate,
-  // countVowels,
+  countVowels,
   // extractDomain,
   // matchHtmlTags,
   // findCapitalizedWords,
